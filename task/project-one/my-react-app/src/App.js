@@ -1,0 +1,32 @@
+import { useEffect, useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  const [response, setResponse] = useState('');
+
+  useEffect(() => {
+    fetch('/api')
+      .then((data) => data.text())
+      .then(setResponse);
+  }, []);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>{response}</p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,44 @@
+localhost {
+    tls /certs/local.crt /certs/local.key
+    respond "hello world"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# react.localhost {
+#     tls local.crt local.key
+
+#     handle /api {
+#         uri strip_prefix api
+#         reverse_proxy http://localhost:8080
+#     }
+
+#     reverse_proxy http://localhost:3000
+# }
+# express.localhost {
+#     handle /8080 {
+#         uri strip_prefix 8080
+#         reverse_proxy http://localhost:8080
+#     }
+
+#     handle /8081 {
+#         uri strip_prefix 8081
+#         reverse_proxy http://localhost:8081
+#     }
+
+#     reverse_proxy http://localhost:8080
+# }

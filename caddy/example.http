@@ -1,0 +1,15 @@
+###
+# Main App
+GET https://localhost 
+
+###
+# Another App
+GET https://localhost/another
+
+###
+# Main App
+GET https://main.localhost
+
+###
+# Another App
+GET https://another.localhost
